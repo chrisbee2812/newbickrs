@@ -1,7 +1,6 @@
 import type { Route } from "./+types/home";
 import { Outlet } from "react-router";
-import Header from "../components/headfoot/Header";
-import Footer from "../components/headfoot/Footer";
+import Layout from "./_layout";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -12,10 +11,6 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <>
-      <Header />
-        <Outlet />
-      <Footer />
-    </>
+        <Layout />
 );
 }

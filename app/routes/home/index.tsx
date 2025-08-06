@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import '../styles/index.css'
+import '../../styles/index.css'
 
-export default function App() {
+export default function Index() {
 
  
     const texts = [
