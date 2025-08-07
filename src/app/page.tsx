@@ -34,7 +34,7 @@ export default function Home() {
         </div>
         <div className="flex items-center justify-center">
           <Image
-            src="https://placehold.co/600x600.png"
+            src="/digital-experience.jpg"
             alt="Developer portrait"
             width={600}
             height={600}
