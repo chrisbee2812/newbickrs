@@ -11,17 +11,17 @@ export function Footer() {
         </p>
         <div className="flex items-center space-x-2">
           <Button variant="ghost" size="icon" asChild>
-            <Link href="#" aria-label="Twitter">
+            <Link href="mailto:chris@bickrs.com" aria-label="Email send to Chris">
               <Mail className="h-5 w-5" />
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="#" aria-label="GitHub">
+            <Link href="https://github.com/chrisbee2812/" aria-label="GitHub">
               <Github className="h-5 w-5" />
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="#" aria-label="LinkedIn">
+            <Link href="https://www.linkedin.com/in/chris-bicknell-69a9a136/" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5" />
             </Link>
           </Button>
