@@ -16,12 +16,12 @@ export function Footer() {
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://github.com/chrisbee2812/" aria-label="GitHub">
+            <Link href="https://github.com/chrisbee2812/" target="_blank" rel="noopener noreferrer" prefetch={false} aria-label="GitHub">
               <Github className="h-5 w-5" />
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://www.linkedin.com/in/chris-bicknell-69a9a136/" aria-label="LinkedIn">
+            <Link href="https://www.linkedin.com/in/chris-bicknell-69a9a136/" target="_blank" rel="noopener noreferrer" prefetch={false} aria-label="LinkedIn">
               <Linkedin className="h-5 w-5" />
             </Link>
           </Button>

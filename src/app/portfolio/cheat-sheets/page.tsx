@@ -12,7 +12,7 @@ const projects = [
     liveUrl: '#',
     githubUrl: '#',
     imageHint: 'online shopping',
-    targetProp: '_blank'
+    targetProp: ''
   },
   {
     title: 'Task Management App',
@@ -22,15 +22,15 @@ const projects = [
     liveUrl: '#',
     githubUrl: '#',
     imageHint: 'task management',
-    targetProp: '_blank'
+    targetProp: ''
   },
   {
     title: 'Games',
     description: 'A few games, Hangman, Sudoku and Tiles to keep your brain working...',
     techStack: ['Next.js', 'Tailwind CSS', 'React'],
-    imageUrl: '/games.png',
-    liveUrl: '/portfolio/games',
-    githubUrl: '',
+    imageUrl: 'https://placehold.co/600x400.png',
+    liveUrl: '#',
+    githubUrl: '#',
     imageHint: 'developer portfolio',
     targetProp: ''
   },
@@ -38,8 +38,8 @@ const projects = [
     title: 'Web Dev cheat sheets',
     description: 'A collection of web development cheat sheets for quick reference on HTML, CSS, JavaScript, and more.',
     techStack: ['React', 'OpenWeatherMap API', 'CSS Modules'],
-    imageUrl: '/cheatsheets.png',
-    liveUrl: '/portfolio/cheat-sheets',
+    imageUrl: 'https://placehold.co/600x400.png',
+    liveUrl: '#',
     githubUrl: '#',
     imageHint: 'weather forecast',
     targetProp: ''
@@ -51,10 +51,10 @@ export default function PortfolioPage() {
     <div className="container mx-auto px-4 py-16 sm:py-24">
       <div className="space-y-4 text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl">
-          My Work
+          Web Dev Cheat Sheets
         </h1>
         <p className="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl">
-          Here are some of the projects I've worked on.
+          This started as a personal project to keep track of useful web development resources and has grown into a collection of cheat sheets for quick reference on HTML, CSS, JavaScript, and more.
         </p>
       </div>
 
@@ -62,10 +62,6 @@ export default function PortfolioPage() {
         {projects.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}
-      </div>
-
-      <div className="mt-24">
-        <AiDescriptionGenerator />
       </div>
     </div>
   );

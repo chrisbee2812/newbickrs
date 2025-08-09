@@ -8,7 +8,7 @@ import { Toaster } from '@/app/components/ui/toaster';
 import { cn } from '@/app/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Skill Showcase',
+  title: 'bickrs.com - Developer Portfolio',
   description: 'A portfolio to showcase web development projects.',
 };
 

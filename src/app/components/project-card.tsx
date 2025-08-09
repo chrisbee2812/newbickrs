@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { Github, Globe } from 'lucide-react';
+import { Github, Globe, SendHorizontal } from 'lucide-react';
 
 type ProjectCardProps = {
   title: string;
@@ -13,6 +13,7 @@ type ProjectCardProps = {
   liveUrl: string;
   githubUrl: string;
   imageHint: string;
+  targetProp: string; // Changed to React.ReactNode to allow for custom components like Link
 };
 
 export function ProjectCard({
@@ -22,8 +23,16 @@ export function ProjectCard({
   imageUrl,
   liveUrl,
   githubUrl,
-  imageHint
+  imageHint,
+  targetProp
 }: ProjectCardProps) {
+  let linkTarget: React.ReactNode;
+  if (targetProp === '') {
+    linkTarget = <Link href={liveUrl}><SendHorizontal className="mr-2 h-4 w-4" />Go to {title} page</Link>;
+  } else {
+    linkTarget = <Link href={liveUrl} target="_blank" rel="noopener noreferrer"><Globe className="mr-2 h-4 w-4" /> Live Demo</Link>;
+  }
+
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg">
       <CardHeader>
@@ -50,15 +59,13 @@ export function ProjectCard({
         </div>
       </CardContent>
       <CardFooter className="flex justify-end space-x-4">
-        <Button variant="outline" asChild>
-          <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
+        {/* <Button variant="outline" asChild>        
+          <Link href={githubUrl} target={targetProp} rel="noopener noreferrer">
             <Github className="mr-2 h-4 w-4" /> Code
           </Link>
-        </Button>
+        </Button> */}
         <Button asChild>
-          <Link href={liveUrl} target="_blank" rel="noopener noreferrer">
-            <Globe className="mr-2 h-4 w-4" /> Live Demo
-          </Link>
+          {linkTarget}
         </Button>
       </CardFooter>
     </Card>
