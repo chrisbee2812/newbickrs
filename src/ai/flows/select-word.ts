@@ -25,7 +25,7 @@ const SelectWordOutputSchema = z.object({
 });
 export type SelectWordOutput = z.infer<typeof SelectWordOutputSchema>;
 
-export async function selectWord(input: SelectWordInput): Promise<SelectWordOutput> {
+export async function selectWord(input: SelectWordInput, wordList: string[]): Promise<SelectWordOutput> {
   return selectWordFlow(input);
 }
 
@@ -33,19 +33,16 @@ const prompt = ai.definePrompt({
   name: 'selectWordPrompt',
   input: {schema: SelectWordInputSchema},
   output: {schema: SelectWordOutputSchema},
-  prompt: `You are a word selection AI for a Hangman game. Select a word based on the user's win/loss ratio to provide a challenging experience.
+  prompt: `You are a word selection AI for a Hangman game. Select a random english word from 4 to 14 letters in length.
 
-  Win/Loss Ratio: {{{winLossRatio}}}
-
-  Difficulty Adjustment:
-  - If the win/loss ratio is less than 0.3, select a short, common word.
-  - If the win/loss ratio is between 0.3 and 0.7, select a word of medium length and difficulty.
-  - If the win/loss ratio is greater than 0.7, select a long, complex word.
+  Do not use a word that is in the following list: {wordList.join(', ')}.
 
   Respond with the selected word.
 
   Selected Word:`,
 });
+
+
 
 const selectWordFlow = ai.defineFlow(
   {

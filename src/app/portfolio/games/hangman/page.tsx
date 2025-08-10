@@ -17,6 +17,7 @@ export default function Home() {
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [gameState, setGameState] = useState<'not_started' | 'playing' | 'won' | 'lost'>('not_started');
+  const [wordList, setWordList] = useState<string[]>([]);
 
   useEffect(() => {
     try {
@@ -43,8 +44,9 @@ export default function Home() {
     setGuessedLetters([]);
     setGameState('playing');
     const ratio = winLoss.losses === 0 ? winLoss.wins : winLoss.wins / winLoss.losses;
-    const newWord = await getNewWord(ratio);
+    const newWord = await getNewWord(ratio, wordList);
     setWordToGuess(newWord);
+    setWordList(prev => [...prev, newWord]);
     setIsLoading(false);
   }, [winLoss]);
 

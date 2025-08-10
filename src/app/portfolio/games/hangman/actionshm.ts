@@ -8,9 +8,9 @@ import { selectWord } from '@/ai/flows/select-word';
  * @param winLossRatio - The ratio of wins to losses for the current player.
  * @returns A promise that resolves to the new word in uppercase.
  */
-export async function getNewWord(winLossRatio: number): Promise<string> {
+export async function getNewWord(winLossRatio: number, wordList: []): Promise<string> {
   try {
-    const result = await selectWord({ winLossRatio });
+    const result = await selectWord({ winLossRatio }, wordList);
     if (!result.word || result.word.trim() === '' || !/^[a-zA-Z]+$/.test(result.word)) {
         throw new Error('AI returned an invalid word.');
     }
