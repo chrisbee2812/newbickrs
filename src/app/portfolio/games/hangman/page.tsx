@@ -45,9 +45,14 @@ export default function Home() {
     setGameState('playing');
     const ratio = winLoss.losses === 0 ? winLoss.wins : winLoss.wins / winLoss.losses;
     const newWord = await getNewWord(ratio, wordList);
-    setWordToGuess(newWord);
-    setWordList(prev => [...prev, newWord]);
-    setIsLoading(false);
+    if (wordList.includes(newWord)) {
+      startNewGame();
+    } else {
+      setWordToGuess(newWord);
+      setWordList(prev => [...prev, newWord]);
+      setIsLoading(false);
+    }
+    
   }, [winLoss]);
 
   const incorrectLetters = useMemo(() => {

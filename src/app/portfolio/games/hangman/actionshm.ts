@@ -176,6 +176,6 @@ export async function getNewWord(winLossRatio: number, wordList: string[]): Prom
   "violence", "virtually", "visiting", "volunteer", "warranty", "weakness",
   "weighted", "whatever", "whenever", "wherever", "wildlife", "withdraw",
   "workshop", "yourself"];
-    return fallbackWords[Math.floor(Math.random() * fallbackWords.length)];
+    return fallbackWords[Math.floor(Math.random() * fallbackWords.length)].toUpperCase();
   }
 }

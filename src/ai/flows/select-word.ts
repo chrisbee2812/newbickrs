@@ -33,13 +33,15 @@ const prompt = ai.definePrompt({
   name: 'selectWordPrompt',
   input: {schema: SelectWordInputSchema},
   output: {schema: SelectWordOutputSchema},
-  prompt: `You are a word selection AI for a Hangman game. Select a random english word from 4 to 14 letters in length.
+  prompt: `You are a word selection AI for a Hangman game. Select a random English word that meets the following criteria:
+1. Length: Between 4 and 14 letters.
+2. Common word (not obscure or highly specialized).
+3. Does not contain hyphens, apostrophes, or spaces.
+4. Not in this list: {wordList.join(', ')}.
 
-  Do not use a word that is in the following list: {wordList.join(', ')}.
+Respond with only the chosen word, nothing else. Do not include any explanations or formatting.
 
-  Respond with the selected word.
-
-  Selected Word:`,
+Selected Word:`,
 });
 
 
