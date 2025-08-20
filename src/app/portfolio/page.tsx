@@ -5,13 +5,13 @@ import Link from 'next/link';
 
 const projects = [
   {
-    title: 'E-commerce Platform',
-    description: 'A full-stack e-commerce platform with features like product catalog, shopping cart, and payment integration.',
-    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Stripe'],
-    imageUrl: 'https://placehold.co/600x400.png',
-    liveUrl: '#',
-    githubUrl: '#',
-    imageHint: 'online shopping',
+    title: 'Doggy Day Care Web Site',
+    description: 'A complete website for a doggy day care service, featuring a ai dog breed information tool and contact form.',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    imageUrl: '/bickbark.jpg',
+    liveUrl: 'https://www.bicknellsdoglove.org/',
+    githubUrl: 'https://github.com/chrisbee2812/BicknellsBarkers/tree/main',
+    imageHint: 'doggy day care',
     targetProp: '_blank'
   },
   {
@@ -37,10 +37,10 @@ const projects = [
     {
     title: 'Web Dev cheat sheets',
     description: 'A collection of web development cheat sheets for quick reference on HTML, CSS, JavaScript, and more.',
-    techStack: ['React', 'OpenWeatherMap API', 'CSS Modules'],
+    techStack: ['React', 'CSS Modules', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     imageUrl: '/cheatsheets.png',
     liveUrl: '/portfolio/cheat-sheets',
-    githubUrl: '#',
+    githubUrl: '',
     imageHint: 'weather forecast',
     targetProp: ''
   },

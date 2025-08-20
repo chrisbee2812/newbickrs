@@ -30,7 +30,7 @@ export function ProjectCard({
   if (targetProp === '') {
     linkTarget = <Link href={liveUrl}><SendHorizontal className="mr-2 h-4 w-4" />Go to {title} page</Link>;
   } else {
-    linkTarget = <Link href={liveUrl} target="_blank" rel="noopener noreferrer"><Globe className="mr-2 h-4 w-4" /> Live Demo</Link>;
+    linkTarget = <Link href={liveUrl} target="_blank" rel="noopener noreferrer"><Globe className="mr-2 h-4 w-4" /> Web Site</Link>;
   }
 
   return (
@@ -59,11 +59,11 @@ export function ProjectCard({
         </div>
       </CardContent>
       <CardFooter className="flex justify-end space-x-4">
-        {/* <Button variant="outline" asChild>        
+        {githubUrl ? <Button variant="outline" asChild>        
           <Link href={githubUrl} target={targetProp} rel="noopener noreferrer">
             <Github className="mr-2 h-4 w-4" /> Code
           </Link>
-        </Button> */}
+        </Button> : null}
         <Button asChild>
           {linkTarget}
         </Button>
