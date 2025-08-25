@@ -15,24 +15,24 @@ const projects = [
     targetProp: '_blank'
   },
   {
-    title: 'Task Management App',
-    description: 'A collaborative task management application to help teams stay organized and productive with boards, lists, and cards.',
-    techStack: ['React', 'Firebase', 'Sass', 'React DnD'],
-    imageUrl: 'https://placehold.co/600x400.png',
-    liveUrl: '#',
-    githubUrl: '#',
-    imageHint: 'task management',
-    targetProp: '_blank'
-  },
-  {
     title: 'Games',
     description: 'A few games, Hangman, Sudoku and Tiles to keep your brain working...',
     techStack: ['Next.js', 'Tailwind CSS', 'React'],
     imageUrl: '/games.png',
     liveUrl: '/portfolio/games',
     githubUrl: '',
-    imageHint: 'developer portfolio',
+    imageHint: 'a few games',
     targetProp: ''
+  },
+  {
+    title: 'Personal Trainer Website',
+    description: 'Created to advertise a personal trainers services, includes a contact form and small gallery.',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    imageUrl: '/fitfemme.webp',
+    liveUrl: 'https://the-fit-femme.vercel.app/',
+    githubUrl: 'https://github.com/chrisbee2812/TheFitFemme',
+    imageHint: 'fit femme',
+    targetProp: '_blank'
   },
     {
     title: 'Web Dev cheat sheets',
@@ -41,7 +41,7 @@ const projects = [
     imageUrl: '/cheatsheets.png',
     liveUrl: '/portfolio/cheat-sheets',
     githubUrl: '',
-    imageHint: 'weather forecast',
+    imageHint: 'web dev cheat sheets',
     targetProp: ''
   },
 ];
