@@ -1,7 +1,4 @@
 import { ProjectCard } from '@/app/components/project-card';
-import AiDescriptionGenerator from '@/app/components/ai-description-generator';
-import { Globe } from 'lucide-react';
-import Link from 'next/link';
 
 const projects = [
   {
@@ -62,10 +59,6 @@ export default function PortfolioPage() {
         {projects.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}
-      </div>
-
-      <div className="mt-24">
-        <AiDescriptionGenerator />
       </div>
     </div>
   );

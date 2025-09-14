@@ -35,11 +35,11 @@ export default function Home() {
         <div className="flex items-center justify-center">
           <Image
             src="/digital-experience.jpg"
-            alt="Developer portrait"
+            alt="A digital image of code in waves and luminesence"
             width={600}
             height={600}
             className="rounded-full object-cover shadow-2xl"
-            data-ai-hint="developer portrait"
+            data-ai-hint="digital image of code in waves and luminesence"
           />
         </div>
       </div>
