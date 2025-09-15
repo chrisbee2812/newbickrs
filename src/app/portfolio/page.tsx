@@ -22,6 +22,16 @@ const projects = [
     targetProp: ''
   },
   {
+    title: 'SafeTPen',
+    description: 'Latest web site created for a medical supplies manufacturer, still a few items to complete, awaiting client for images.',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    imageUrl: '/fitfemme.webp',
+    liveUrl: 'https://www.safetpen.com/',
+    githubUrl: 'https://github.com/chrisbee2812/TheFitFemme',
+    imageHint: 'SafeTPen',
+    targetProp: '_blank'
+  },
+  {
     title: 'Personal Trainer Website',
     description: 'Created to advertise a personal trainers services, includes a contact form and small gallery.',
     techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],

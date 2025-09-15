@@ -6,6 +6,7 @@ import { Header } from '@/app/components/header';
 import { Footer } from '@/app/components/footer';
 import { Toaster } from '@/app/components/ui/toaster';
 import { cn } from '@/app/lib/utils';
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: 'bickrs.com - Developer Portfolio',
@@ -56,7 +57,10 @@ export default function RootLayout({
         >
           <div className="relative flex min-h-screen flex-col">
             <Header />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1">
+              {children}
+              <Analytics />
+            </main>
             <Footer />
           </div>
           <Toaster />
