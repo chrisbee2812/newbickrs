@@ -25,9 +25,9 @@ const projects = [
     title: 'SafeTPen',
     description: 'Latest web site created for a medical supplies manufacturer, still a few items to complete, awaiting client for images.',
     techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
-    imageUrl: '/fitfemme.webp',
+    imageUrl: '/safetpen.webp',
     liveUrl: 'https://www.safetpen.com/',
-    githubUrl: 'https://github.com/chrisbee2812/TheFitFemme',
+    githubUrl: 'https://github.com/chrisbee2812/podonics',
     imageHint: 'SafeTPen',
     targetProp: '_blank'
   },
@@ -50,6 +50,16 @@ const projects = [
     githubUrl: '',
     imageHint: 'web dev cheat sheets',
     targetProp: ''
+  },
+  {
+    title: "Jay's solutions Removal Services",
+    description: 'A simple site created for a Removal company, including a contact form.',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    imageUrl: '/jaysremovals.webp',
+    liveUrl: 'https://www.jayssolutionsremovalservices.co.uk/',
+    githubUrl: 'https://github.com/chrisbee2812/jayssolutions',
+    imageHint: "Jay's solutions Removal Services",
+    targetProp: '_blank'
   },
 ];
 
