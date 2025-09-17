@@ -1,4 +1,5 @@
 import { ProjectCard } from '@/app/components/project-card';
+import { NextSeo } from 'next-seo';
 
 const projects = [
   {
@@ -65,21 +66,42 @@ const projects = [
 
 export default function PortfolioPage() {
   return (
-    <div className="container mx-auto px-4 py-16 sm:py-24">
-      <div className="space-y-4 text-center">
-        <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl">
-          My Work
-        </h1>
-        <p className="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl">
-          Here are some of the projects I've worked on.
-        </p>
-      </div>
+    <>
+      <NextSeo
+        title="My Web Development Projects"
+        description="Browse a collection of my latest work, including React applications, Next.js websites, and full-stack projects."
+        canonical="https://bickrs.com/portfolio"
+        openGraph={{
+          url: 'https://bickrs.com/portfolio',
+          title: 'My Web Development Projects',
+          description: 'Browse a collection of my latest work as a freelance developer.',
+          images: [
+            {
+              url: 'https://bickrs.com/og-projects.jpeg', // A specific image for the portfolio page
+              width: 768,
+              height: 768,
+              alt: 'Chris Bicknell - Project Portfolio',
+            },
+          ],
+        }}
+      />
+      <div className="container mx-auto px-4 py-16 sm:py-24">
+        <div className="space-y-4 text-center">
+          <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl">
+            My Work
+          </h1>
+          <p className="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl">
+            Here are some of the projects I've worked on.
+          </p>
+        </div>
 
-      <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
-        ))}
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
+    
   );
 }
