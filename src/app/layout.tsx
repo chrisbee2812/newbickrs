@@ -9,8 +9,8 @@ import { cn } from '@/app/lib/utils';
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: 'bickrs.com - Developer Portfolio',
-  description: 'A portfolio to showcase web development projects.',
+  title: 'Chris Bicknell: Web Developer Creating Fast, SEO-Friendly Websites for Businesses',
+  description: 'Portsmouth-based Web Developer specializing in modern, responsive websites and SEO for small businesses. I build sites that help you grow. View my portfolio and get a free quote today.',
 };
 
 const fontBody = Inter({
@@ -41,6 +41,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
+        <link rel="canonical" href="https://www.bickrs.com/" />
       </head>
       <body
         className={cn(
