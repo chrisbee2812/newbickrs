@@ -7,6 +7,7 @@ import { Footer } from '@/app/components/footer';
 import { Toaster } from '@/app/components/ui/toaster';
 import { cn } from '@/app/lib/utils';
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: 'Chris Bicknell: Web Developer Creating Fast, SEO-Friendly Websites for Businesses',
@@ -61,6 +62,7 @@ export default function RootLayout({
             <main className="flex-1">
               {children}
               <Analytics />
+              <SpeedInsights />
             </main>
             <Footer />
           </div>
