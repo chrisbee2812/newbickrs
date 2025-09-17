@@ -2,16 +2,10 @@ import { Button } from '@/app/components/ui/button';
 import { Code, MoveRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-// import { NextSeo } from 'next-seo';
 
 export default function Home() {
   return (
-    <>
-      {/* <NextSeo
-        title="Home" // Becomes "Home | John Doe - Web Developer"
-        // The canonical, description, and OG tags will automatically use the defaults from the config file.
-      /> */}
-      <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-32">
+    <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-32">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="space-y-6">
             <div className="inline-block rounded-full bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground">
@@ -50,7 +44,5 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
-    
   );
 }
