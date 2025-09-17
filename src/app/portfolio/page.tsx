@@ -1,5 +1,5 @@
 import { ProjectCard } from '@/app/components/project-card';
-import { NextSeo } from 'next-seo';
+// import { NextSeo } from 'next-seo';
 
 const projects = [
   {
@@ -67,7 +67,7 @@ const projects = [
 export default function PortfolioPage() {
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title="My Web Development Projects"
         description="Browse a collection of my latest work, including React applications, Next.js websites, and full-stack projects."
         canonical="https://bickrs.com/portfolio"
@@ -84,7 +84,7 @@ export default function PortfolioPage() {
             },
           ],
         }}
-      />
+      /> */}
       <div className="container mx-auto px-4 py-16 sm:py-24">
         <div className="space-y-4 text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl">
