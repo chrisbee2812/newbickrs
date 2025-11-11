@@ -11,7 +11,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: 'Chris Bicknell: Web Developer Creating Fast, SEO-Friendly Websites for Businesses',
-  description: 'Portsmouth-based Web Developer specializing in modern, responsive websites and SEO for small businesses. I build sites that help you grow. View my portfolio and get a free quote today.',
+  description: 'Web Developer specializing in modern, responsive websites and SEO for small businesses. I build sites that help you grow. View my portfolio and get a free quote today.',
 };
 
 const fontBody = Inter({

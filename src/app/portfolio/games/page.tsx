@@ -1,8 +1,6 @@
 import { ProjectCard } from '@/app/components/project-card';
-import AiDescriptionGenerator from '@/app/components/ai-description-generator';
 import { Globe, Type } from 'lucide-react';
 import Link from 'next/link';
-import { T } from '@genkit-ai/googleai';
 
 const projects = [
   {
