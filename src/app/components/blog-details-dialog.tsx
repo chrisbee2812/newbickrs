@@ -22,7 +22,7 @@ export default function BlogDetailsDialog({ blog, open, onOpenChange }: BlogDeta
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
                
-        <DialogContent className="sm:max-w-[625px]">
+        <DialogContent className="sm:max-w-[625px] md:max-w-[800px] lg:max-w-[900px] xl:max-w-[1000px]">
           <ScrollArea className="max-h-[90vh]"> 
             <DialogHeader className="p-6 text-left">
               <DialogTitle className="font-headline text-primary text-3xl">{blog.title}</DialogTitle>

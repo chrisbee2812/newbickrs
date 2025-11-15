@@ -42,11 +42,11 @@ export default function PortfolioPage() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           {blogs.map((blog) => (
             <Card className="overflow-hidden transition-all hover:shadow-lg">
                 <CardHeader>
-                    <div className="flex flex-col aspect-auto overflow-hidden rounded-lg border">
+                    <div className="flex flex-col aspect-auto overflow-hidden rounded-lg border bg-primary/10">
                         <CardTitle className="font-headline text-2xl p-4">{blog.header}</CardTitle>
                         <div className="flex flex-col p-4 pl-8">
                             {blog.headerSubs.map((sub) => (
@@ -58,17 +58,17 @@ export default function PortfolioPage() {
                     </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                    <div className="flex flex-row overflow-hidden rounded-lg border">
+                    <div className="flex flex-row overflow-hidden rounded-lg border bg-primary/10 p-4">
                         <CardTitle className="font-headline text-2xl px-2">{blog.title}</CardTitle>
-                        <Badge key={blog.date} variant="secondary">
+                        <Badge className="ml-6" key={blog.date} variant="secondary">
                             {blog.date}
                         </Badge>
                     </div>
                     <p className="text-muted-foreground">{blog.description}</p>
                 </CardContent>
                 <CardFooter className="flex justify-end space-x-4">
-                    <Button onClick={() => handleBlogCardClick(blog)}>
-                        Expand
+                    <Button className="self-baseline" onClick={() => handleBlogCardClick(blog)}>
+                        View Blog
                     </Button>
                 </CardFooter>
             </Card>
